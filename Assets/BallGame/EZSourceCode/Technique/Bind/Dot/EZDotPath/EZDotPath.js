@@ -1,0 +1,70 @@
+#pragma strict
+class EZDotPath extends EZDot{
+
+	private var hurt_:float = 0;
+	public function setup(info:JsonData.JsonPack, context:EZAffixContext, seat:EZSoul.Seat){
+		super.setup(info, context, seat);
+		hurt_ = this.physics;
+		hurt_ *= this.level[this.lv_];
+		hurt_ *= context.root.strongDot;
+		
+		if(hurt_ == 0)
+			hurt_ = 1;
+		
+		data_.val = hurt_;
+		
+	}
+	public function execute(context:EZDotContext){
+		super.execute(context);
+		var data:EZTechDataValue = new EZTechDataValue();
+		data.power = power_;
+		data.type = "attack";
+		data.physics = function(seat:EZSoul.Seat){
+			return hurt_;
+		};
+		data.magic = function(seat:EZSoul.Seat){
+			return 0;
+		};
+		context.data = data;
+		context.data.puncture = true;
+		this.medical(context);
+	}
+	
+	private function medical(context:EZDotContext){
+		
+		
+		var data:EZTechDataValue = new EZTechDataValue();
+		data.power = power_;
+		data.type = "medical";
+		data.target = EZTarget.Target.WeBattle;
+		
+		data.physics = function(seat:EZSoul.Seat):float{
+			var ret:EZAttackHandler.AttackResult = EZAttackHandler.AttackPlanning(context.data, EZSoul.Seat.None, context.to);
+			
+			var to:EZSoul = EZContainerManager.GetSoul(seat) as EZSoul;
+			var handler:EZBuffHandler = to.getBuffHandler();
+			var injury:float = handler.injury();
+			
+			return ret.vampire * injury;
+			
+		};
+	
+	
+		data.times = function():int{
+			return 1;
+		};
+		data.magic = function(seat:EZSoul.Seat):float{
+			return 0;
+		};
+		
+		context.data.addBesides(data);
+	}
+	
+	
+	public function get attack():float{
+		if(hurt_ != 0)
+			this.flicker = true;
+		return hurt_ * times_;
+	}
+	
+}

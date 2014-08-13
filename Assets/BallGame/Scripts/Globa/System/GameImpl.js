@@ -1,0 +1,6 @@
+#pragma strict
+
+class GameImpl{
+
+
+};

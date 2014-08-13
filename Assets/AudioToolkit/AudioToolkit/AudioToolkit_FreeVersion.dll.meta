@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 6c3fe97f7c7cf7840845cfee747751ac
+labels:
+- audio
+- clockstone
+- toolkit
+- framework
+- scripts
+- pooling
+- singleton
+- pool
+- sound
+- free
+MonoAssemblyImporter:
+  serializedVersion: 1
+  iconMap: {}
+  executionOrder: {}
+  userData: 

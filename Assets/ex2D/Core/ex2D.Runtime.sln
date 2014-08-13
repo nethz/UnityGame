@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB9-8B4A-11D0-8D11-00A0C91BC942}") = "ex2D.Runtime", "ex2D.Runtime.dll", "{B9FA77DD-0965-46F8-969C-B2DD63BDF4C5}"
+	ProjectSection(MonoDevelopProperties) = preProject
+		name = ex2D.Runtime
+		Configurations = $0
+		$0.Configuration = $1
+		$1.name = Default
+		$1.OutputPath = .\
+		$1.ctype = ProjectConfiguration
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Default|Any CPU = Default|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B9FA77DD-0965-46F8-969C-B2DD63BDF4C5}.Default|Any CPU.ActiveCfg = Default|Any CPU
+		{B9FA77DD-0965-46F8-969C-B2DD63BDF4C5}.Default|Any CPU.Build.0 = Default|Any CPU
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = ex2D.Runtime.dll
+	EndGlobalSection
+EndGlobal
