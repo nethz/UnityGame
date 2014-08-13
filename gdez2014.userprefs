@@ -1,0 +1,31 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/BallGame/Scripts/Globa/www/WebTaskFactories.js">
+    <Files>
+      <File FileName="Assets/BallGame/EZSourceCode/EZData/EZHomeTable.js" Line="13" Column="41" />
+      <File FileName="Assets/BallGame/EZSourceCode/EZRoom/EZLobby/EZLobbyLogic.js" Line="80" Column="51" />
+      <File FileName="Assets/BallGame/EZSourceCode/EZCard2/Common/EZShopTable.js" Line="123" Column="1" />
+      <File FileName="Assets/Plugins/JsonData/WebSetupData.cs" Line="352" Column="2" />
+      <File FileName="Assets/BallGame/Scripts/Globa/www/WebTaskFactories.js" Line="1" Column="1" />
+      <File FileName="Assets/BallGame/EZSourceCode/EZSetting/Ctrl/EZSettingLogic.js" Line="24" Column="55" />
+      <File FileName="Assets/BallGame/EZSourceCode/EZData/EZSetupTable.js" Line="54" Column="87" />
+      <File FileName="../../bargame/Assets/Bar/LoaderTask.cs" Line="38" Column="14" />
+      <File FileName="../../bargame/Assets/Plugins/Web/WebInfo.js" Line="50" Column="8" />
+      <File FileName="../../bargame/Assets/Plugins/Web/WebLoaderTask.js" Line="44" Column="14" />
+      <File FileName="Assets/BallGame/EZSourceCode/EZData/EZUpdateTable.js" Line="30" Column="88" />
+      <File FileName="Assets/BallGame/EZSourceCode/EZSetting/Ctrl/EZSettingCtrl.js" Line="29" Column="73" />
+      <File FileName="Assets/BallGame/EZSourceCode/EZSetting/View/EZWeixinInfo.js" Line="52" Column="63" />
+      <File FileName="Assets/BallGame/Scripts/Globa/www/WebInfo.js" Line="65" Column="25" />
+      <File FileName="Assets/BallGame/Scripts/ActionManager/PropertyAction.js" Line="1" Column="1" />
+      <File FileName="Assets/BallGame/EZSourceCode/EZData/EZBagTable.js" Line="52" Column="28" />
+      <File FileName="Assets/BallGame/EZSourceCode/EZCard2/View/Bag/EZCardViewSelected.js" Line="1" Column="1" />
+      <File FileName="Assets/BallGame/EZSourceCode/EZCard2/View/Bag/EZCardView.js" Line="140" Column="23" />
+      <File FileName="Assets/BallGame/EZSourceCode/Global/UI/EZLoading.js" Line="109" Column="4" />
+      <File FileName="Assets/BallGame/EZSourceCode/EZRoom/EZLobby/EZHomeGuide.js" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
