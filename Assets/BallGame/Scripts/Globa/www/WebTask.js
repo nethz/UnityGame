@@ -15,7 +15,7 @@ class WebTask extends Task{
 		this.over_ = true;
 	}
 	private var error_: Geek.WebError = Geek.WebError.NoError;
-	protected var name_:String = "no.name";
+	//protected var name_:String = "no.name";
 	protected var server_:WebInfo.Server = WebInfo.Server.Slave;
 	protected var url_;
 	public function WebTask(url:String){
@@ -60,7 +60,7 @@ class WebTask extends Task{
 	
 //			Debug.Log("nononono");
 		if(www.error != null) {
-			Debug.Log(name_ +":"+www.error);
+			//Debug.Log(name_ +":"+www.error);
 			this.setError(Geek.WebError.LinkError, www.error);
 			return;
 		}
@@ -83,7 +83,7 @@ class WebTask extends Task{
 		
 		
 		try{
-			Debug.Log(name_); 
+			Debug.Log(url_); 
 			/*if(cache.cache){ 
 				if(text == '{"cache":true}'){ 
 					handleImpl(cache.cache.cache);
