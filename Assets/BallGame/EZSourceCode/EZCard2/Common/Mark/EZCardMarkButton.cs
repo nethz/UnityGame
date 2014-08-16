@@ -13,7 +13,6 @@ public class EZCardMarkButton : MonoBehaviour {
 			target.SendMessage("OnAction", _mark, SendMessageOptions.DontRequireReceiver);
 		}
 		
-		
-		//this.transform.parent.parent.SendMessage("close", SendMessageOptions.DontRequireReceiver);
+
 	}
 }

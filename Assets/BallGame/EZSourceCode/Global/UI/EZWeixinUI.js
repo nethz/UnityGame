@@ -11,7 +11,6 @@ class EZWeixinUI extends MonoBehaviour{
 	public function Awake(){ 
 		instance_ = this;
 		TaskManager.registerTask("weixin.ui.window", this.windowTask);
-		//TaskManager.registerTask("weixin.ui.warning", this.warningTask);
 		ActionManager.registerFunction("weixin.ui.close", function(){_window.close();});
 	
 		
@@ -58,13 +57,16 @@ class EZWeixinUI extends MonoBehaviour{
 		var isOver:boolean = false;
 		
 		task.init = function(){
+			Debug.Log("AA");
 			isOver = false;
 			_window.okCancel(task.text, task.message, 
 				function(){
+					Debug.Log("BB");
 					task.okOrCancel = true;
 					isOver = true;
 				},
 				function(){
+					Debug.Log("CC");
 					task.okOrCancel = false;
 					isOver = true;
 				},

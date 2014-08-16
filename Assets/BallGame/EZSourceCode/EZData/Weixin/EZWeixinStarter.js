@@ -30,10 +30,12 @@ class EZWeixinStarter extends MonoBehaviour{
 		var table:EZMessageBagTable = EZMessageBagTable.GetInstance();
 		var day = table.day();
 		TaskManager.PushBack(day, function(){
-			var target:GameObject = GameObject.FindGameObjectWithTag("Ctrl");
-			if(target){
-				target.SendMessage("receive_day", SendMessageOptions.DontRequireReceiver);
-			}
+		
+			Geek.SendMessage("receive_day", null, SendMessageOptions.DontRequireReceiver);
+			//var target:GameObject = GameObject.FindGameObjectWithTag("Ctrl");
+			//if(target){
+			//	target.SendMessage("receive_day", SendMessageOptions.DontRequireReceiver);
+			//}
 		});
 		TaskManager.Run(day);
 	
@@ -48,25 +50,29 @@ class EZWeixinStarter extends MonoBehaviour{
 		window.cancel = _cancel;
 		TaskManager.PushFront(window, function(){
 			
-			var target:GameObject = GameObject.FindGameObjectWithTag("Ctrl");
-			if(target){
-				target.SendMessage("pause", SendMessageOptions.DontRequireReceiver);
-			}
+			//var target:GameObject
+		
+			Geek.SendMessage("pause", null, SendMessageOptions.DontRequireReceiver);
+			
 			
 		
 		});
 		TaskManager.PushBack(window, function(){ 
-			var target:GameObject = GameObject.FindGameObjectWithTag("Ctrl");
-			if(target){
+		
+		
 				if(window.okOrCancel){ 
 					var table:EZWeixinTable = EZWeixinTable.GetInstance(); 
 					table.weixinId = id;
-					target.SendMessage("weixin", SendMessageOptions.DontRequireReceiver);
+					Geek.SendMessage("weixin", null, SendMessageOptions.DontRequireReceiver);
 					
 				}else{
-					target.SendMessage("goon", SendMessageOptions.DontRequireReceiver);
+					Geek.SendMessage("goon", null, SendMessageOptions.DontRequireReceiver);
 				}
-			}
+				
+					
+			
+			
+			
 		
 		});
 		TaskManager.Run(window);
@@ -78,39 +84,43 @@ class EZWeixinStarter extends MonoBehaviour{
 		Debug.Log("is bind");
 		var window:EZWindowTask = TaskManager.Create("weixin.ui.window") as EZWindowTask;
 		window.text = _login;
+		
+		Debug.Log("is bind0");
 		window.ok = _bind;
+		Debug.Log("is bind1");
 		window.cancel = _cancel;
 		TaskManager.PushFront(window, function(){
 			  
-			var target:GameObject = GameObject.FindGameObjectWithTag("Ctrl");
-			if(target){
-				target.SendMessage("pause", SendMessageOptions.DontRequireReceiver);
-			}
+			Debug.Log("is bind3");
+			Geek.SendMessage("pause", null, SendMessageOptions.DontRequireReceiver);
+				
+			Debug.Log("is bind4");
+	
 			
 		
 		});
 		TaskManager.PushBack(window, function(){ 
-			var target:GameObject = GameObject.FindGameObjectWithTag("Ctrl");
-			if(target){
+		
 				if(window.okOrCancel){ 
 					var table:EZWeixinTable = EZWeixinTable.GetInstance(); 
 					table.weixinId = id;
-					target.SendMessage("weixin", SendMessageOptions.DontRequireReceiver);
+					Geek.SendMessage("weixin", null, SendMessageOptions.DontRequireReceiver);
 					
 				}else{
-					target.SendMessage("goon", SendMessageOptions.DontRequireReceiver);
+					Geek.SendMessage("goon", null, SendMessageOptions.DontRequireReceiver);
 				}
-			}
+			
 		
 		});
 		TaskManager.Run(window);
 	}
 	
 	function becomeActive(){
-		var target:GameObject = GameObject.FindGameObjectWithTag("Ctrl");
-		if(target){
-				target.SendMessage("becomeActive", SendMessageOptions.DontRequireReceiver);
-		}
+		Geek.SendMessage("becomeActive", null, SendMessageOptions.DontRequireReceiver);
+		//var target:GameObject = GameObject.FindGameObjectWithTag("Ctrl");
+		//if(target){
+		//		target.SendMessage("becomeActive", SendMessageOptions.DontRequireReceiver);
+		//}
 	}
 	function receiveCrystal(crystal:JsonData.WeixinCrystal){ 
 		if(_crystal == false){
@@ -127,18 +137,24 @@ class EZWeixinStarter extends MonoBehaviour{
 		var receive:Task = table.receiveCrystal(crystal);
 		
 		TaskManager.PushFront(receive, function(){
-			var target:GameObject = GameObject.FindGameObjectWithTag("Ctrl");
-			if(target){
-				target.SendMessage("pause", SendMessageOptions.DontRequireReceiver);
-			}
+			//var target:GameObject = GameObject.FindGameObjectWithTag("Ctrl");
+			//if(target){
+				//target.SendMessage("pause", SendMessageOptions.DontRequireReceiver);
+				Geek.SendMessage("pause", null, SendMessageOptions.DontRequireReceiver);
+			//}
 		});
 		TaskManager.PushBack(receive, function(){ 
-			var target:GameObject = GameObject.FindGameObjectWithTag("Ctrl");
-			if(target){
-				target.SendMessage("receive_crystal", SendMessageOptions.DontRequireReceiver);
-				target.SendMessage("goon", SendMessageOptions.DontRequireReceiver);
+		
+			Geek.SendMessage("receive_crystal", null, SendMessageOptions.DontRequireReceiver);
+		
+			Geek.SendMessage("goon", null, SendMessageOptions.DontRequireReceiver);
+			//var target:GameObject = GameObject.FindGameObjectWithTag("Ctrl");
+			//if(target){
 				
-			}
+			//	target.SendMessage("receive_crystal", SendMessageOptions.DontRequireReceiver);
+		//		target.SendMessage("goon", SendMessageOptions.DontRequireReceiver);
+				
+		//	}
 		
 		});
 		TaskManager.Run(receive);
@@ -192,18 +208,24 @@ class EZWeixinStarter extends MonoBehaviour{
 		
 		TaskManager.PushFront(receive, function(){
 		
-			var target:GameObject = GameObject.FindGameObjectWithTag("Ctrl");
-			if(target){
-				target.SendMessage("pause", SendMessageOptions.DontRequireReceiver);
-			}
+			Geek.SendMessage("pause", null, SendMessageOptions.DontRequireReceiver);
+		//	var target:GameObject = GameObject.FindGameObjectWithTag("Ctrl");
+		//	if(target){
+		//		target.SendMessage("pause", SendMessageOptions.DontRequireReceiver);
+		//	}
 		});
 		TaskManager.PushBack(receive, function(){
 		
-			var target:GameObject = GameObject.FindGameObjectWithTag("Ctrl");
-			if(target){
-				target.SendMessage("receive_invitation", SendMessageOptions.DontRequireReceiver);
-				target.SendMessage("goon", SendMessageOptions.DontRequireReceiver);
-			}
+		
+			Geek.SendMessage("receive_invitation", null, SendMessageOptions.DontRequireReceiver);
+			
+			Geek.SendMessage("goon", null, SendMessageOptions.DontRequireReceiver);
+			//var target:GameObject = GameObject.FindGameObjectWithTag("Ctrl");
+			//if(target){
+			
+			//	target.SendMessage("receive_invitation", SendMessageOptions.DontRequireReceiver);
+		//		target.SendMessage("goon", SendMessageOptions.DontRequireReceiver);
+		//	}
 			
 		});
 		

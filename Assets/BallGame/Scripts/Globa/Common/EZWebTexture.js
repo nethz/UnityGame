@@ -6,7 +6,7 @@ import System.Collections.Generic;
 class EZWebTexture extends EZInputHandler{
 
 	
-	public var _URL:String = "http://www.baidu.com";
+	public var _URL:String = "http://www.ezdoing.com";
 	public var _width:int = 512;
 	public var _height:int = 512;
 	public var _keyboardEnabled:boolean = true;

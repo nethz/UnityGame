@@ -59,7 +59,7 @@ class WebPack{
 		}
 		var debug:String = "";
 		if(Debug.isDebugBuild){
-			debug = "&debug=1";
+			debug = "&debug=2";
 		}
 		var tUrl:String =  url + uuid + debug + "&version="+EZUpdateTable.GetInstance().version;
 		

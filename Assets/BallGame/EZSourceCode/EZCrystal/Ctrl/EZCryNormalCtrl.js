@@ -21,7 +21,7 @@ class EZCryNormalCtrl extends MonoBehaviour{
 	
 	public var _title:String = "title";
 	public var _description:String = "_description";
-	public var _url:String = "http://baidu.com";
+	public var _url:String = "http://www.ezdoing.com";
 	public var _fail:String = "fail";
 	public var _magicTypeImage:String[];
 	public function s2wImpl(wt:EZWeixinCrystalTask, magicType:Geek.MagicType):Task{

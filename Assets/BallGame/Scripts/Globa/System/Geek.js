@@ -471,6 +471,22 @@ static function GetQualityColor(quality:Geek.Quality, alpha:float, brightness:fl
 	}
 	return color;
 }
+static function SendMessage (methodName:String, val:Object,  options:SendMessageOptions){
+		Debug.Log("a");
+		var gos : GameObject[] = GameObject.FindGameObjectsWithTag("Ctrl");;
+		Debug.Log("b");
+		for(var i:int =0; i<gos.Length; ++i){
+			Debug.Log("c");
+			var target:GameObject = gos[i];
+			Debug.Log("c"+target.name);
+			if(target.activeSelf){
+				
+				Debug.Log("d");
+				target.SendMessage(methodName, val, options);
+			}
+		}
+
+}
 
 static function GetNameByProSty(type:Geek.MagicType,style:String):String{
 	if(type == Geek.MagicType.None){

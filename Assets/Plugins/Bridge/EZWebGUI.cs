@@ -14,7 +14,7 @@ public class EZWebGUI : MonoBehaviour
 {
 	
 	// URL 
-	public string URL = "http://www.baidu.com";
+	public string URL = "http://www.ezdoing.com";
 	
 	// position 
 	public int X = 0;
